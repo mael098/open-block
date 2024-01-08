@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --grey: #303234;
+    --dark-grey: #333;
+    --light-grey: #999;
+    --red: #ff0000;
+    --green: #00ff00;
+    --blue: #0000ff;
+    --yellow: #ffff00;
+    --orange: #ff8000;
+    --purple: #8000ff;
+    --pink: #ff00ff;
+}
+body {
+    background: linear-gradient(to bottom , #39383a 12%, var(--grey) 30%, #0e3531 90%  ) no-repeat fixed;
+    color: var(--dark-grey);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+.conteiner {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* perfil */
+
+.perfil h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--white);
+    filter: blur(0.5px);
+    text-shadow: 0 0 10px var(--white);
+
+}
+.perfil .fecha {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--white);
+    filter: blur(0.5px);
+    text-shadow: 0 0 10px var(--white);
+}
+
+.perfil span {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+
+/* agreagar tareas */
+
+.agregar-tarea {
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    margin: 40px 0;
+    
+}
+
+.agregar-tarea input {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-grey);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px var(--dark-grey);
+    transition: all 0.3s ease;
+
+}
+
+.agregar-tarea i {
+    font-size: 40px;
+    color: var(--purple);
+}
+
+.agregar-tarea i:active {
+    color: var(--purple);
+    animation: active 0.4s ease;
+}
+@keyframes active {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+.agregar-tarea input:focus { 
+    animation: focus 0.3s ease;
+    box-shadow: 0 0 10px var(--purple);
+}
+
+@keyframes focus {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* seccion tareas */
+.selecion-tarea h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    filter: blur(0.5px);
+    text-shadow: 0 0 10px var(--white);
+
+}
+
+.selecion-tarea li {
+    display: flex;
+    background: linear-gradient(to bottom , var(--grey) , #129c90 ) ;
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px var(--dark-grey);
+    transition: all 0.3s ease;
+}
+
+.selecion-tarea li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--purple);
+}
+
+.selecion-tarea i {
+    font-size: 30px;
+    color: var(--white);
+}
+.selecion-tarea i:hover {
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.selecion-tarea > ul p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    filter: blur(0.5px);
+    text-shadow: 0 0 10px var(--white);
+}
+
+.linea-punteada {
+    border-bottom: 3px dashed var(--white);
+    width: 100%;
+    margin: 10px 0;
+    color: var(--red);
+}
